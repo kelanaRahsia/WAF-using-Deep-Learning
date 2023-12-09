@@ -12,11 +12,14 @@ You also need to setup MySQL server as the database of this project. I used XAMP
 The Demonstration Website will be like this:
 ![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/ebdfe67d-c369-444e-9f24-3e6f10a8674f)
 
+
+<img src="https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/ebdfe67d-c369-444e-9f24-3e6f10a8674f" alt="image" width="50%" height="auto">
+
 **The credential of this demo website is stated in the SQL file.**
 
 After you successfully run all the code provided, you will be able to see another webpage.
 
-![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/0cca12b2-9276-491a-ad25-5e49e3d57d21 =300x200)
+![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/0cca12b2-9276-491a-ad25-5e49e3d57d21)
 
 If you try to submit some malicious payload, an alert will appear according to the payload that you inserted.
 
