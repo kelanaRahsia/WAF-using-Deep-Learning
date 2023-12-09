@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Requests</title>
+    <style>
+        /* Your existing CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f4f4f4;
+        }
+        /* Add style for clickable headers */
+        th.sortable {
+            cursor: pointer;
+        }
+        /* Add style for clickable headers */
+        th.sortable {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Requests</h1>
+    
+    <!-- Add a dropdown for selecting the number of rows to display -->
+    <label for="rowsPerPage">Rows per page:</label>
+    <select id="rowsPerPage">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    
+    <table border="0">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th class="sortable" data-column="0">Source</th>
+                <th class="sortable" data-column="1">Destination</th>
+                <th class="sortable" data-column="2">URL</th>
+                <th class="sortable" data-column="3">Method</th>
+                <th class="sortable" data-column="4">User Input</th>
+                <th class="sortable" data-column="5">Input Length</th>
+                <th class="sortable" data-column="6">Time & Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index in range(data|length) %}
+                <tr>
+                    <td>{{ index + 1 }}</td> <!-- Add row numbers starting from 1 -->
+                    <td>{{ data[index][0] }}</td>
+                    <td>{{ data[index][1] }}</td>
+                    <td>{{ data[index][2] }}</td>
+                    <td>{{ data[index][3] }}</td>
+                    <td>{{ data[index][4] }}</td>
+                    <td>{{ data[index][5] }}</td>
+                    <td>{{ data[index][6] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript code for table sorting and row limit handling
+        document.addEventListener("DOMContentLoaded", function () {
+            const headers = document.querySelectorAll("th.sortable");
+            let currentColumn = null;
+            let ascending = true;
+
+            headers.forEach(header => {
+                header.addEventListener("click", () => {
+                    const column = header.getAttribute("data-column");
+                    if (column === currentColumn) {
+                        ascending = !ascending;
+                    } else {
+                        ascending = true;
+                    }
+                    currentColumn = column;
+
+                    sortTable(column, ascending);
+                });
+            });
+
+            // Function to sort the table
+            function sortTable(column, ascending) {
+                // Sort code (same as in the previous response)
+                const table = document.querySelector("table");
+                const tbody = table.querySelector("tbody");
+                const rows = Array.from(tbody.querySelectorAll("tr"));
+
+                rows.sort((a, b) => {
+                    const aValue = a.querySelector(`td:nth-child(${parseInt(column) + 1})`).textContent;
+                    const bValue = b.querySelector(`td:nth-child(${parseInt(column) + 1})`).textContent;
+                    
+                    return ascending ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                    
+                });
+
+                // Remove existing rows
+                rows.forEach(row => {
+                    tbody.removeChild(row);
+                });
+
+                // Append sorted rows
+                rows.forEach(row => {
+                    tbody.appendChild(row);
+                });
+                // ...
+            }
+
+            // Handle the rows per page selection
+            const rowsPerPageSelect = document.getElementById("rowsPerPage");
+            rowsPerPageSelect.addEventListener("change", () => {
+                const selectedRowCount = parseInt(rowsPerPageSelect.value);
+                updateRowsPerPage(selectedRowCount);
+            });
+
+            // Function to update the number of rows displayed per page
+            function updateRowsPerPage(selectedRowCount) {
+                const table = document.querySelector("table");
+                const tbody = table.querySelector("tbody");
+                const rows = Array.from(tbody.querySelectorAll("tr"));
+                const startIndex = 0;
+                const endIndex = selectedRowCount;
+
+                rows.forEach((row, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        row.style.display = "";
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+            }
+
+            // Initialize rows per page to the default value
+            updateRowsPerPage(parseInt(rowsPerPageSelect.value));
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Requests</title>
+    <style>
+        /* Your existing CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f4f4f4;
+        }
+        /* Add style for clickable headers */
+        th.sortable {
+            cursor: pointer;
+        }
+        /* Add style for clickable headers */
+        th.sortable {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Requests</h1>
+    <table border="0">
+        <thead>
+            <tr>
+                <th class="sortable" data-column="0">Source</th>
+                <th class="sortable" data-column="1">Destination</th>
+                <th class="sortable" data-column="2">URL</th>
+                <th class="sortable" data-column="3">Method</th>
+                <th class="sortable" data-column="4">User Input</th>
+                <th class="sortable" data-column="5">Input Length</th>
+                <th class="sortable" data-column="6">Time & Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript code for table sorting
+        document.addEventListener("DOMContentLoaded", function () {
+            const headers = document.querySelectorAll("th.sortable");
+            let currentColumn = null;
+            let ascending = true;
+
+            headers.forEach(header => {
+                header.addEventListener("click", () => {
+                    const column = header.getAttribute("data-column");
+                    if (column === currentColumn) {
+                        ascending = !ascending;
+                    } else {
+                        ascending = true;
+                    }
+                    currentColumn = column;
+
+                    sortTable(column, ascending);
+                });
+            });
+
+            function sortTable(column, ascending) {
+                const table = document.querySelector("table");
+                const tbody = table.querySelector("tbody");
+                const rows = Array.from(tbody.querySelectorAll("tr"));
+
+                rows.sort((a, b) => {
+                    const aValue = a.querySelector(`td:nth-child(${parseInt(column) + 1})`).textContent;
+                    const bValue = b.querySelector(`td:nth-child(${parseInt(column) + 1})`).textContent;
+                    
+                    return ascending ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                    
+                });
+
+                // Remove existing rows
+                rows.forEach(row => {
+                    tbody.removeChild(row);
+                });
+
+                // Append sorted rows
+                rows.forEach(row => {
+                    tbody.appendChild(row);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+ -->
