@@ -15,9 +15,11 @@ The Demonstration Website will be like this:
 
 **The credential of this demo website is stated in the SQL file.**
 
+
 After you successfully run all the code provided, you will be able to see another webpage.
 
 <img src="https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/0cca12b2-9276-491a-ad25-5e49e3d57d21" alt="image" width="80%" height="auto">
+
 
 If you try to submit some malicious payload, an alert will appear according to the payload that you inserted.
 
