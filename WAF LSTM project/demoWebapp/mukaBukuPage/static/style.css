@@ -1,0 +1,141 @@
+body {
+    background-color: var(--bg);
+    height: 100vh;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.justify-center{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+
+}
+.container{
+    border: ;
+    
+}
+.content {
+    height: 100%;
+    padding: auto 0;
+    padding-top: 15%;
+}
+.content img{
+    height: 50px;
+    margin-bottom: 15px;
+}
+.content p{
+    font-size: 28px;
+}
+.login-form {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+input{
+    border: 1px solid #DDDFE2;
+    margin-top: 15px;
+    padding: 14px;
+    width: 90%;
+    border-radius: 8px;
+    font-size: 16px;
+}
+input:focus {
+    border: 1px solid #1877F2;
+    outline: none;
+}
+#login-btn {
+    background-color: var(--brand1);
+    width: 90%;
+    font-size: 20px;
+    margin-top: 15px;
+}
+#create-btn{
+    background-color: #36A420;
+    width: 50%;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    
+}
+#login-btn,
+#create-btn {
+    
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    
+    font-weight: bold;
+    border: none;
+}
+.login-form form > a{
+    margin-top: 15px;
+    height: 35px;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--brand1);
+    font-size: 16px;
+    position: relative;
+    
+}
+.login-form form > a:hover {
+    text-decoration: underline;
+    
+}
+.login-form form > a::after{
+    position: absolute;
+    height: 1px;
+    content: "";
+    width: 100%;
+    bottom:0;
+    left: 0;
+    background-color: #DADDE1;
+    color: blue;
+
+}
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+footer a:hover {
+    text-decoration: underline !important;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) { 
+    .col-xs-12{
+        width: calc(8.333333333333334%*12);
+        flex: calc(8.333333333333334%*12);
+    }
+    .content{
+        display: none;
+    }
+    .login-form {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { ... }
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { ... }

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .note-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+
+    <form method="GET" action="{{ url_for('dashboard') }}">
+        <label for="search">Search by Book Name:</label>
+        <input type="text" id="search" name="search">
+        <input type="submit" value="Search">
+    </form>
+
+    <h1>Book Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Book Cover</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Synopsis</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td><img src="data:image/jpeg;base64,{{ book[0] }}" alt="Book Cover"></td>
+                <td>{{ book[1] }}</td>
+                <td>{{ book[2] }}</td>
+                <td>{{ book[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <div class="note-container">
+        <h2>Add a Side Note</h2>
+        <form method="POST" action="{{ url_for('add_note') }}">
+            <input type="text" id="note" name="note" placeholder="Type your side note here">
+            <button type="submit">Add Note</button>
+        </form>
+        <ul id="noteList">
+            {% for note in notes %}
+            <li>{{ note }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+ <!-- Form for adding a note -->
+   <!--  <h3>Welcome {{ username | safe }}!</h3>
+     <form method="GET" action="{{ url_for('dashboard') }}">
+        <label for="search">Search by Book Name:</label>
+        <input type="text" id="search" name="search" value="{{ search_query | safe }}">
+        <input type="submit" value="Search">
+    </form> -->
+
+    <!-- Display the result here -->
+    <!-- <div id="result"></div> -->
+
+    <!-- JavaScript for handling form submission with AJAX -->
+   <!--  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#note-form').submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                // Get the note value from the form
+                var note = $('[name="note"]').val();
+
+                // Send an AJAX request to the server
+                $.post('/dashboard', { note: note }, function (data) {
+                    $('#result').html(data); // Display the result on the page
+                });
+            });
+        });
+    </script> -->
+
+
+    <!-- <div class="note-container">
+        <h2>Add a Side Note</h2>
+        <input type="text" id="note" placeholder="Type your side note here">
+        <button onclick="addNote()">Add Note</button>
+        <ul id="noteList"></ul>
+    </div>
+
+    <script>
+        function addNote() {
+            const noteText = document.getElementById("note").value.trim();
+            if (noteText !== "") {
+                const noteList = document.getElementById("noteList");
+                const noteItem = document.createElement("li");
+        
+                // Intentionally making it vulnerable to XSS by not escaping user input
+                noteItem.innerHTML = noteText;  // Use innerHTML instead of textContent
+                
+                noteList.appendChild(noteItem);
+                document.getElementById("note").value = "";
+            }
+        }
+    </script> -->
+
+
+
+
+
+
+    <!-- <div class="note-container">
+        <h2>Add a Side Note</h2>
+        <input type="text" id="note" placeholder="Type your side note here">
+        <button onclick="addNote()">Add Note</button>
+        <ul id="noteList"></ul>
+    </div> 
+
+   <script>
+        function addNote() {
+            const noteText = document.getElementById("note").value.trim();
+            if (noteText !== "") {
+                const noteList = document.getElementById("noteList");
+                const noteItem = document.createElement("li");
+                noteItem.textContent = noteText;
+                noteList.appendChild(noteItem);
+                document.getElementById("note").value = "";
+            }
+        }
+    </script>  -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome{{ username }}!</h1>
+     <form method="GET" action="{{ url_for('dashboard') }}">
+        <label for="search">Search by Book Name:</label>
+        <input type="text" id="search" name="search">
+        <input type="submit" value="Search">
+    </form>
+
+    <h1>Book Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Book Cover</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Synopsis</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td><img src="data:image/jpeg;base64,{{ book[0] }}" alt="Book Cover"></td>
+                <td>{{ book[1] }}</td>
+                <td>{{ book[2] }}</td>
+                <td>{{ book[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+ -->

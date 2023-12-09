@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MukaBuku – log in or sign up</title>
+    <link rel="stylesheet" href="static/default.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <div class="align-center">
+                        <div class="content">
+                            <!-- <img src="img/mukabuku.png" alt=""> -->
+                            <img src="{{ url_for('static', filename='img/mukabuku.png') }}" alt="">
+                            <p>MukaBuku helps you connect and share with the people in your life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 col-xs-12">
+                    
+                        <div class="login-form">
+                            <form method="POST" action="/login">
+                                <input id="email" name="email" type="text" placeholder="Email address or phone number"><br>
+                                <input id="pass" name="password" type="text" placeholder="Password"><br>
+                                <button type="submit" id="login-btn">Log In</button><br>
+                                <!-- <button type="submit" class="btn btn-primary w-100">Login</button> -->
+                                <a href="#">Forgotten password?</a><br>
+                                <button id="create-btn">Create New Account</button><br>
+                            </form>
+                        </div>
+                        <footer>
+                            <a href="#" 
+                            style="font-weight: bold;
+                            color: var(--black);
+                            text-decoration: none;">Create a Page</a> 
+                            for a celebrity, band or business.
+                        </footer>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
