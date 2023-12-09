@@ -27,7 +27,7 @@ If you try to submit some malicious payload, an alert will appear according to t
 
 All the mukabuku webpage activities will be log into the database. 
 
-<img src="https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/a852a27d-9a94-4ba6-af63-13dfca72bf57" alt="image" width="50%" height="auto">
+<img src="https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/a852a27d-9a94-4ba6-af63-13dfca72bf57" alt="image" width="80%" height="auto">
 
 In conclusion, there are 2 webpage here first the demo webpage and second is the WAF dashboard. The WAF dashboard display all the activity of the demo webpage. 
 
