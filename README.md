@@ -12,6 +12,18 @@ You also need to setup MySQL server as the database of this project. I used XAMP
 The Demonstration Website will be like this:
 ![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/ebdfe67d-c369-444e-9f24-3e6f10a8674f)
 
-The credential of stated in the SQL file.
+**The credential of this demo website is stated in the SQL file.**
+
+After you successfully run all the code provided, you will be able to see another webpage.
+
+![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/0cca12b2-9276-491a-ad25-5e49e3d57d21)
+
+If you try to submit some malicious payload, an alert will appear according to the payload that you inserted.
+
+![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/3d902700-5bc0-47ce-9a32-af78864bf5b5)
+
+
+<h2>**REMAINDER:**</h2>
+**You may encounter some error when you run this code, because of my CUDA version is not same with yours.**
 
 
