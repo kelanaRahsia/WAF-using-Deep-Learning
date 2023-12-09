@@ -5,7 +5,7 @@ This project is actually for my Final Year Project(FYP). The Deep Learning algor
 I used LSTM because according to my research, it has the best accuracy for this type of scenario. This WAF is specifically trained to detect **SQLi**, **XSS** and **Command Injection**. 
 
 Before start, you need to install CUDA, you can follow the youtube tutorial here: [https://youtu.be/39AV57Gqctc ](https://youtu.be/39AV57Gqctc) .
-I run this Project on my **Ubuntu OS** and you also need GPU that support CUDA in order to run this code locally. If you do not have it, you can use Google Colab instead. Please make sure that you download the CUDA version that same with your GPU model.
+I run this Project on my **Ubuntu OS** and you also need GPU that support CUDA in order to run this code locally. If you do not have supported GPU, you can use Google Colab instead. Please make sure that you download the CUDA version that same with your GPU model.
 
 You also need to setup MySQL server as the database of this project. I used XAMPP as the Web Server Solution Stack Package.
 
@@ -25,6 +25,11 @@ If you try to submit some malicious payload, an alert will appear according to t
 
 <img src="https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/3d902700-5bc0-47ce-9a32-af78864bf5b5" alt="image" width="50%" height="auto">
 
+All the mukabuku webpage activities will be log into the database. 
+
+<img src="https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/a852a27d-9a94-4ba6-af63-13dfca72bf57" alt="image" width="50%" height="auto">
+
+In conclusion, there are 2 webpage here first the demo webpage and second is the WAF dashboard. The WAF dashboard display all the activity of the demo webpage. 
 
 <h2>REMAINDER:</h2>
 **You may encounter some error when you run this code, because of my CUDA version is not same with yours.**
