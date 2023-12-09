@@ -32,6 +32,6 @@ All the mukabuku webpage activities will be log into the database.
 In conclusion, there are 2 webpage here first the demo webpage and second is the WAF dashboard. The WAF dashboard display all the activity of the demo webpage. 
 
 <h2>REMAINDER:</h2>
-**You may encounter some error when you run this code, because of my CUDA version is not same with yours.**
+**You may encounter some errors when you run this code because of my CUDA version is not same with yours.**
 
 
