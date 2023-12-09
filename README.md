@@ -15,7 +15,7 @@ The Demonstration Website will be like this:
 **The credential of this demo website is stated in the SQL file.**
 
 After you successfully run all the code provided, you will be able to see another webpage.
-
+[<img src="[image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/0cca12b2-9276-491a-ad25-5e49e3d57d21)" width="250"/>]
 ![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/0cca12b2-9276-491a-ad25-5e49e3d57d21)
 
 If you try to submit some malicious payload, an alert will appear according to the payload that you inserted.
@@ -23,7 +23,7 @@ If you try to submit some malicious payload, an alert will appear according to t
 ![image](https://github.com/kelanaRahsia/WAF-using-Deep-Learning/assets/137630479/3d902700-5bc0-47ce-9a32-af78864bf5b5)
 
 
-<h2>**REMAINDER:**</h2>
+<h2>REMAINDER:</h2>
 **You may encounter some error when you run this code, because of my CUDA version is not same with yours.**
 
 
